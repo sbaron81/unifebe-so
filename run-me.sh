@@ -1,3 +1,4 @@
 #!/bin/bash
 
-echo "Em desenvolvimento!"
+Date
+echo "Unifebe - Sistema da Informação - Sistemas Operacionais"
