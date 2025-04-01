@@ -35,7 +35,7 @@ format_pontuacao() {
 # Função para verificar CPU, Memória, Disco e Placa de Rede
 testa_requisitos() {
     cpus=$(nproc)
-    memoria=$(free -g | awk '/^Mem:/ {print $2}')
+    memoria=$(free -k | awk '/^Mem:/ {print $2}')
     #disco=$(df -BG / | awk 'NR==2 {print $2}' | tr -d 'G')
     disco=$(fdisk -l /dev/sda | grep ^Disk | head -1 | sed -e 's/.*: //' -e 's/,.*//' | sed -e 's/ GiB//')
     placas=$(ip -o link show | grep -v 'lo' | wc -l)
@@ -46,7 +46,7 @@ testa_requisitos() {
         pontuacao=$(echo "scale=2; $pontuacao + 0.25" | bc)
     fi
 
-    if [[ "$memoria" -ge 4 ]]; then
+    if [[ "$memoria" -ge 4000000 ]]; then
         pontuacao=$(echo "scale=2; $pontuacao + 0.25" | bc)
     fi
 
