@@ -62,7 +62,7 @@ testa_requisitos() {
     echo -e "Questao 1: $(format_pontuacao "$pontuacao") de 1.00"
 
     [[ "$cpus" -eq 2 ]] && print_ok "CPUs: $cpus" || print_error "CPUs: $cpus (Esperado: 2)"
-    [[ "$memoria" -ge 4 ]] && print_ok "Memória: ${memoria}GB" || print_error "Memória: ${memoria}GB (Esperado: 4GB ou mais)"
+    [[ "$memoria" -ge 4000000 ]] && print_ok "Memória: ${memoria}KB" || print_error "Memória: ${memoria}KB (Esperado: 4GB ou mais)"
     [[ "$disco" -ge 25 ]] && print_ok "Espaço em Disco: ${disco}GB" || print_error "Espaço em Disco: ${disco}GB (Esperado: 25GB ou mais)"
     [[ "$placas" -eq 2 ]] && print_ok "Placas de Rede: $placas" || print_error "Placas de Rede: $placas (Esperado: 2)"
     
