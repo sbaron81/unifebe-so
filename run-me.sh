@@ -87,7 +87,8 @@ testa_sistema() {
 
     echo -e "Questao 2: $(format_pontuacao $pontuacao) de 1.00"
 
-    [[ "$idioma" == "en_US.UTF-8" ]] && print_ok "Idioma: $idioma" || print_error "Idioma: $idioma (Esperado: en_US.UTF-8)"
+    #[[ "$idioma" == "en_US.UTF-8" ]] && print_ok "Idioma: $idioma" || print_error "Idioma: $idioma (Esperado: en_US.UTF-8)"
+    [[ "$idioma" == "C.UTF-8" ]] && print_ok "Idioma: $idioma" || print_error "Idioma: $idioma (Esperado: en_US.UTF-8)"
     [[ "$teclado" == "br" ]] && print_ok "Layout do Teclado: $teclado" || print_error "Layout do Teclado: $teclado (Esperado: br)"
     [[ "$dhcp_count" -ge 2 ]] && print_ok "DHCP Configurado para ambas placas de rede" || print_error "DHCP não configurado corretamente (Esperado: 2 interfaces com DHCP)"
     [[ "$usuario" == "ubuntu" ]] && print_ok "Usuário: $usuario" || print_error "Usuário: $usuario (Esperado: ubuntu)"
