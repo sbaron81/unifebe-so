@@ -8,6 +8,8 @@ RESET="\e[0m"
 
 NOTA=0
 
+sudo apt install bc 
+
 # Função para imprimir [OK]
 print_ok() {
     echo -e "  ${BOLD}[${GREEN}PASS${RESET}${BOLD}]${RESET} $1"
