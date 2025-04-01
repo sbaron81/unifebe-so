@@ -8,7 +8,7 @@ RESET="\e[0m"
 
 NOTA=0
 
-sudo apt install bc -y
+sudo apt install bc network-manager -y
 
 # Função para imprimir [OK]
 print_ok() {
