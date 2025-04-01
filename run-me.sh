@@ -170,7 +170,7 @@ testa_arquivo() {
 testa_download() {
     arquivo="run-me.sh"
     pontuacao=0
-    qtd=$(find /home/sbaron -name $arquivo 2>/dev/null | wc -l)
+    qtd=$(find / -name $arquivo 2>/dev/null | wc -l)
     [[ $qtd -ge 1 ]] && pontuacao=1
     
     echo -e "Questao 7: $(format_pontuacao $pontuacao) de 1.00"
