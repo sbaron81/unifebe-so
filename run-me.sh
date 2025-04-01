@@ -81,7 +81,7 @@ testa_sistema() {
     
     pontuacao=0
 
-    [[ "$idioma" == "en_US.UTF-8" ]] && pontuacao=$(echo "scale=2; $pontuacao + 0.1667" | bc)
+    [[ "$idioma" == "C.UTF-8" ]] && pontuacao=$(echo "scale=2; $pontuacao + 0.1667" | bc)
     [[ "$teclado" == "br" ]] && pontuacao=$(echo "scale=2; $pontuacao + 0.1667" | bc)
     [[ "$dhcp_count" -ge 2 ]] && pontuacao=$(echo "scale=2; $pontuacao + 0.1667" | bc)
     [[ "$usuario" == "ubuntu" ]] && pontuacao=$(echo "scale=2; $pontuacao + 0.1667" | bc)
