@@ -8,7 +8,7 @@ RESET="\e[0m"
 
 NOTA=0
 
-sudo apt install bc 
+sudo apt install bc -y
 
 # Função para imprimir [OK]
 print_ok() {
