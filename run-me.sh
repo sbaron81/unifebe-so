@@ -8,7 +8,8 @@ RESET="\e[0m"
 
 NOTA=0
 
-sudo apt install bc network-manager -y
+#sudo apt install bc network-manager -y
+sudo apt install bc -y
 
 # Função para imprimir [OK]
 print_ok() {
@@ -72,7 +73,8 @@ testa_requisitos() {
 testa_sistema() {
     idioma=$(locale | grep LANG= | cut -d= -f2)
     teclado=$(localectl status | grep "X11 Layout" | awk '{print $3}')
-    dhcp_count=$(nmcli device show | grep 'IP4.DHCP4' | wc -l)
+    #dhcp_count=$(nmcli device show | grep 'IP4.DHCP4' | wc -l)
+    dhcp_count=$(ip ad  | grep dynamic | wc -l)
     usuario=$(grep ubuntu /etc/passwd | cut -d':' -f1 )
     hostname=$(hostname)
     openssh_instalado=$(dpkg -l | grep -q '^ii  openssh-server' && echo 1 || echo 0)
